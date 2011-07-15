@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Google +1 Button</title>
+        <script>
+            (function ()
+            {
+                "use strict";
+
+                window.addEventListener("DOMContentLoaded", function ()
+                {
+                    var toolbarButton = null;
+                    var toolbarProperties =
+                    {
+                        title: "Google +1 Button",
+                        icon: "images/icon_48x48.png",
+                        popup:
+                        {
+                            href: "popup.html",
+                            width: 55,
+                            height: 70
+                        }
+                    }
+
+                    /* Add the toolbar button */
+                    toolbarButton = window.opera.contexts.toolbar.createItem(toolbarProperties);
+                    window.opera.contexts.toolbar.addItem(toolbarButton);
+
+                    /* Send the URL to popup */
+                    window.opera.extension.onconnect = function (event)
+                    {
+                        try
+                        {
+                            event.source.postMessage(window.opera.extension.tabs.getFocused().url);
+                        }
+                        catch (exception)
+                        {
+                            //window.opera.postError(exception);
+                        }
+                    }
+                }, false);
+            }());
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

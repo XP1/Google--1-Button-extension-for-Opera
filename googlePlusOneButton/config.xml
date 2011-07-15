@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="https://github.com/XP1/Google--1-Button-extension-for-Opera" version="1.0">
+    <name>Google +1 Button</name>
+    <description>Click the button; +1 any webpage.</description>
+    <author href="https://github.com/XP1/Google--1-Button-extension-for-Opera">XP1</author>
+    <icon src="images/icon_48x48.png"/>
+    <access origin="https://google.com/" subdomains="true"/>
+    <access origin="https://gstatic.com/" subdomains="true"/>
+</widget>
