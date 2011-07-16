@@ -1,1 +1,1 @@
-// Intentionally left empty.
+/* This script file is intentionally left empty for the extension to work. */

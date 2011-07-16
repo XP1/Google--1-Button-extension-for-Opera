@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html dir="ltr" lang="en">
     <head>
         <meta charset="utf-8"/>
@@ -25,7 +25,7 @@
                 font-size: 80%;
             }
         </style>
-        <script src="https://apis.google.com/js/plusone.js">
+        <script src="http://apis.google.com/js/plusone.js">
             {
                 // Documentation: http://code.google.com/apis/+1button/
                 // Introduction: http://www.google.com/events/io/2011/static/presofiles/an_introduction_to_the_+1_button.pdf
@@ -39,13 +39,15 @@
 
                 window.addEventListener("DOMContentLoaded", function ()
                 {
-                    // When URL received, add +1 button HTML to the DOM and then parse.
-                    window.opera.extension.onmessage = function (event)
+                    var tabUrl = window.opera.extension.bgProcess.getTabUrl();
+
+                    if (tabUrl === null)
                     {
-                        var tabUrl = event.data;
-                        document.getElementById("plusOne").innerHTML = "<g:plusone href=\"" + tabUrl + "\" size=\"tall\"></g:plusone>";
-                        gapi.plusone.go();
+                        return;
                     }
+
+                    document.getElementById("plusOne").innerHTML = "<g:plusone href=\"" + tabUrl + "\" size=\"tall\"></g:plusone>";
+                    gapi.plusone.go();
                 }, false);
             }());
         </script>
