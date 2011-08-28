@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="https://github.com/XP1/Google--1-Button-extension-for-Opera/" version="1.01">
+<widget xmlns="http://www.w3.org/ns/widgets" id="https://github.com/XP1/Google--1-Button-extension-for-Opera/" version="1.02">
     <name short="Google +1" dir="ltr" xml:lang="en">Google +1 Button</name>
     <description dir="ltr" xml:lang="en">Click the button; +1 any webpage.</description>
     <author href="https://github.com/XP1/Google--1-Button-extension-for-Opera/">XP1</author>
-    <icon src="icons/plusOneBlueBackgroundFullSquare_64x64.png"/>
+    <icon src="images/icons/plusOneBlueBackgroundFullSquare_64x64.png"/>
     <feature name="opera:share-cookies" required="true"/>
     <access origin="http://google.com/" subdomains="true"/>
     <access origin="https://google.com/" subdomains="true"/>

@@ -1,0 +1,111 @@
+﻿@charset "utf-8";
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font: 13px Arial, sans-serif;
+}
+
+a
+{
+    color: #3366cc; /* Mariner blue. */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+/**
+ * Default values.
+ */
+h1
+{
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+}
+
+h2
+{
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+}
+
+h3, p
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+input, select
+{
+    padding: 1px;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"]
+{
+    width: 80px;
+    padding: 5px;
+}
+
+input[type="checkbox"]
+{
+    margin: 3px 3px 3px 4px;
+}
+
+input[type="radio"]
+{
+    margin-top: 3px;
+    margin-right: 3px;
+    margin-left: 5px;
+}
+
+/**
+ * Helper classes.
+ */
+.centerText
+{
+    text-align: center;
+}
+
+.hide
+{
+    visibility: hidden;
+}
+
+/**
+ * Noscript.
+ */
+noscript
+{
+    background: rgba(255, 255, 255, 0.5); /* White. */
+    border: 1px solid rgba(255, 255, 255, 0.33); /* White. */
+    box-shadow: 0 0 10px #98b0c9; /* Rock blue. */
+    color: #1e3853; /* Cello dark blue. */
+
+    display: block;
+    margin: 15px auto;
+    max-width: 700px;
+    line-height: 24px;
+    overflow-x: hidden;
+}
+
+noscript p
+{
+    background-color: #f4f6f9; /* Aqua haze. */
+    color: #000000; /* Black. */
+
+    margin: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    font-weight: 900;
+    font-size: 14px;
+}

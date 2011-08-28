@@ -3,56 +3,21 @@
     <head>
         <meta charset="utf-8"/>
         <title>Google +1 Button</title>
-        <style>
-            #plusOne
-            {
-                /* Source: http://snippets.dzone.com/posts/show/7689 */
+        <link rel="stylesheet" href="/css/general.css"/>
+        <link rel="stylesheet" href="/css/popup.css"/>
+    </head>
+    <body>
+        <article id="plusOne">
+            <span id="errorMessage" class="centerText">Open a webpage first.</span>
+        </article>
 
-                /* Size of Google +1 button */
-                width: 50px;
-                height: 60px;
-
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-left: -25px; /* Half of width */
-                margin-top: -30px; /* Half of height */
-            }
-
-            #errorMessage
-            {
-                font-family: Tahoma, Arial, sans-serif;
-                font-size: 80%;
-            }
-        </style>
-        <script src="http://apis.google.com/js/plusone.js">
+        <script src="https://apis.google.com/js/plusone.js">
             {
                 // Documentation: http://code.google.com/apis/+1button/
                 // Introduction: http://www.google.com/events/io/2011/static/presofiles/an_introduction_to_the_+1_button.pdf
                 parsetags: "explicit" // Must call Google's API explicitly after +1 button HTML is added. If the +1 button HTML does not exist beforehand, there will be nothing to parse.
             }
         </script>
-        <script>
-            (function ()
-            {
-                "use strict";
-
-                window.addEventListener("DOMContentLoaded", function ()
-                {
-                    var tabUrl = window.opera.extension.bgProcess.getTabUrl();
-
-                    if (tabUrl === null)
-                    {
-                        return;
-                    }
-
-                    document.getElementById("plusOne").innerHTML = "<g:plusone href=\"" + tabUrl + "\" size=\"tall\"></g:plusone>";
-                    gapi.plusone.go();
-                }, false);
-            }());
-        </script>
-    </head>
-    <body>
-        <div id="plusOne"><span id="errorMessage">Open a webpage first.</span></div>
+        <script src="/js/popup.js"></script>
     </body>
 </html>
